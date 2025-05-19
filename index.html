@@ -1,38 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#000000"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="manifest" href="manifest.json" />
-  <title>Image Plein Écran</title>
+  <title>Green iPhone</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
       background: black;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      padding: 10px;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    a {
+      display: block;
+      width: 100%;
       height: 100%;
       overflow: hidden;
-      touch-action: none;
+      border-radius: 8px;
     }
     img {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      pointer-events: none;
-      user-select: none;
       display: block;
     }
   </style>
 </head>
 <body>
-  <img src="https://i.postimg.cc/FRMDgVBf/Green.jpg" alt="Image" />
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
-    }
-  </script>
+<a href="Black-Green"><img src="https://i.postimg.cc/QN6tVdyC/Black.jpg" alt="Black Green cross" /></a>
+<a href="Black-Blue"><img src="https://i.postimg.cc/nrwcW3DB/Black-Blue.jpg" alt="Black Blue cross" /></a>
+<a href="Black-White"><img src="https://i.postimg.cc/NF0jb35Q/Black-White.jpg" alt="Black Whithe cross" /></a>
+<a href="Green-Blue"><img src="https://i.postimg.cc/nz2L4FVd/Green.jpg" alt="Green Blue cross" /></a>
+
 </body>
 </html>
